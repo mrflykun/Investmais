@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="./script/script.js" defer></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+<meta charset="utf-8" />
+    <title>Invest+</title>
+</head>
+<body>
+
+      <!-- SCRIPT LOADING + ANIMATION -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+</script>
+  <!-- Script para remover a classe "skeleton" das divs com a classe "classList" -->
+  <script>
+    // Aguarde o carregamento completo do documento
+    $(document).ready(function () {
+      // Selecione todas as divs com a classe "classList" e remova a classe "skeleton"
+      $(".classList").removeClass("skeleton");
+    });
+  </script>
+ <!-- SCRIPT LOADING + ANIMATION -->
+
+<!-- HEAD -->
+<div class="fixed-top" style="padding: 10px 15px 0px 15px; background-color: #000;">
+    <div class="row">
+   <div class="col-9"><img src="./img/logo-mini.png" style="width:40%; height:80%;"></div>
+   <div class="col-3 text-right"><a href="account.html"><i class="bi bi-person-circle" style="font-size: 22px; color: #7e26f8;"></i></div>
+    </a></div>
+</div>
+<!-- HEAD -->
+
+<!-- footer menu -->
+<div class="fixed-bottom btngradient" style="padding: 5px 5px 20px 5px;">
+  <div class="row">
+
+
+    <div class="col">
+      <a href="index.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-house-heart" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+
+
+    <div class="col ">
+          <button type="button" class=" btnborder " style="margin: -15px 0px 0px 0px;">
+  <i class="bi bi-arrow-down-up" style="font-size: 27px;"></i>
+  </button>  </div>
+
+    <div class="col">
+        <a href="money.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-coin" style="font-size: 20px;"></i>
+</button></a>
+    </div>
+
+    <div class="col">
+     <a href="notify.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-bell" style="font-size: 20px;"></i>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light">
+    1
+  </span>
+</button></a></div>
+
+    <div class="col">
+   <a href="menu.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-list" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+    
+    
+    </div>
+  </div>
+</div>
+<!-- footer menu -->
+
+
+<!-- content -->
+<div style="padding-top: 35px">
+
+    <!-- Menu  -->
+    <div class="MenuNav" style="font-weight:bold;">
+
+        <div class="card" style="width:100%;">
+            <div class="classList skeleton">Seu Credito <span class="badge bg-success"><i class="bi bi-arrow-up"></i> 2% </span></div>
+            <div class="classList skeleton"><h1>R$ 5.924,34 </h1></div>
+            <br>
+            <div class="classList skeleton">valido até dia 27/11/2024</div>
+        </div>
+
+
+    </div>
+    <!-- Menu  -->
+
+
+    <br>
+    <div class="row text-center border border-2 rounded-pill" style="font-size: 22px; color: #fff;">
+        <div class="col">
+            <button type="button" class="btn bg-transparent text-light" data-bs-toggle="modal" data-bs-target="#ModalEnvio"><i class="bi bi-box-arrow-up" style="font-size: 25px;" class="btn btn-primary"></i><p>Enviar</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn bg-transparent text-light" data-bs-toggle="modal" data-bs-target="#ModalDeposito" disabled><i class="bi bi-box-arrow-in-down" style="font-size: 25px;" class="btn btn-primary"></i><p>Depositar</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn bg-transparent text-light" data-bs-toggle="modal" data-bs-target="#ModalCongelar"><i class="bi bi-snow" style="font-size: 25px;" class="btn btn-primary"></i><p>Congelar</button>
+        </div>
+    </div>
+
+
+    <!-- Modal envio -->
+    <div class="modal fade" id="ModalEnvio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 10px;">
+                <div class="modal-header" style="color: #060408;">
+                    <h2>Enviar Crédito</h2>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <span>Quanto deseja enviar:</span>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text border-0 bg-light" id="basic-addon1">R$</span>
+                        <input type="number" id="moneysend" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1.00" max="1000.00" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                    </div>
+
+                    <input type="range" class="form-range" min="1" max="1000" id="rangeInput" style="width:100%;" oninput="atualizarNumero()">
+
+
+                    <!-- Menu  -->
+                    <div class="MenuNav">
+
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="adicionar5()">
+                            R$ 5,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="adicionar10()">
+                            R$ 10,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="adicionar20()">
+                            R$ 20,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="adicionar50()">
+                            R$ 50,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:80px; padding: 5px;" onclick="adicionar100()">
+                            R$ 100,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:80px; padding: 5px;" onclick="adicionar250()">
+                            R$ 250,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:85px; padding: 5px;" onclick="adicionar500()">
+                            R$ 500,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:95px; padding: 5px;" onclick="adicionar1000()">
+                            R$ 1000,00
+                        </div>
+
+
+                    </div>
+                    <!-- Menu  -->
+
+                    <br>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">ID Invest+</span>
+                        <input type="text" class="form-control" placeholder="ID do usuário" aria-label="userid" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-dark rounded-pill" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-success rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="loadingpop()">Enviar Dinheiro</button>
+                    </div>
+                </div>
+
+                <br />
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal envio-->
+
+    <!-- Modal deposito -->
+    <div class="modal fade" id="ModalDeposito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 10px;">
+                <div class="modal-header" style="color: #060408;">
+                    <h2>Depositar</h2>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <span>Quanto deseja depositar:</span>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text border-0 bg-light" id="basic-addon1">R$</span>
+                        <input type="number" id="depositcred" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1.00" max="1000.00" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                    
+                    
+                    </div>
+
+                    <!-- Menu  -->
+                    <div class="MenuNav">
+
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="deposit5()">
+                            R$ 5,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="deposit20()">
+                            R$ 20,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="deposit50()">
+                            R$ 50,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:80px; padding: 5px;" onclick="deposit100()">
+                            R$ 100,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:80px; padding: 5px;" onclick="deposit250()">
+                            R$ 250,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:85px; padding: 5px;" onclick="deposit500()">
+                            R$ 500,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:95px; padding: 5px;" onclick="deposit1000()">
+                            R$ 1000,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:95px; padding: 5px;" onclick="deposit5000()">
+                            R$ 5000,00
+                        </div>
+
+
+                    </div>
+                    <!-- Menu  -->
+
+                    <br>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-dark rounded-pill" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-success rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="loadingpop()">Depositar</button>
+                    </div>
+                </div>
+
+                <br />
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal deposito -->
+
+
+    <!-- Modal congelar -->
+    <div class="modal fade" id="ModalCongelar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 10px;">
+                <div class="modal-header" style="color: #060408;">
+                    <h2>Congelar Crédito</h2>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <span>Quanto deseja Congelar:</span>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text border-0 bg-light" id="basic-addon1">R$</span>
+                        <input type="number" id="moneyice" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1.00" max="1000.00" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                    </div>
+
+                    <input type="range" class="form-range" min="1" max="1000" id="rangeInputice" style="width:100%;" oninput="congelarNumero()">
+
+
+                    <!-- Menu  -->
+                    <div class="MenuNav">
+
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="congelar5()">
+                            R$ 5,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="congelar10()">
+                            R$ 10,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="congelar50()">
+                            R$ 50,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:75px; padding: 5px;" onclick="congelar100()">
+                            R$ 100,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:80px; padding: 5px;" onclick="congelar500()">
+                            R$ 500,00
+                        </div>
+                        <div class="card" style=" color: #fff; width:85px; padding: 5px;" onclick="congelar1000()">
+                            R$ 1000,00
+                        </div>
+
+
+                    </div>
+                    <!-- Menu  -->
+
+                    <br>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-dark rounded-pill" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn border border-success rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="loadingpop()">Congelar Crédito</button>
+                    </div>
+                </div>
+
+                <br />
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal envio-->
+
+
+    <!-- Modal Autenticação-->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <div class="popup" id="popup">
+        <span class="loader" id="loader"></span><br>
+        <span class="enviadoconfirm" id="enviadoconfirm" style="display: none; color: #8453f2; ">
+            <center>
+                <i class="bi bi-arrow-up" style="font-size: 50px;"></i><br>Autenticando
+            </center></span>
+    </div>
+    <!-- Modal Autenticação-->
+
+    <!-- historico --><br>
+                      <div class="divgradient-clear overflow-auto" style="padding-bottom: 30px;">
+                        <div class="row">
+                            <div class="col-9"><h5 style="color: #060408;">Transições<span class="badge rounded-pill text-dark fw-lighter">resumo</span></h5></div>
+                            <div class="col-2"><a href="transitionall.html"><span class="badge rounded-pill  text-dark">Ver mais</span></a></div>
+                          </div>
+
+                          <a href="../transitiotype.html" style="text-decoration:none; ">
+                            <div class="border rounded-pill" style="padding: 15px;">
+                             <div class="row">
+                              <div class="classList profile-img skeleton"><div class="col-1"><img src="./img/steam.png"></div></div>
+                              <div class="classList skeleton"><div class="col-13"><h5>Steam</h5><span style="font-size: 12px;">27/11/2023 ás 17:03</span></div></div>
+                              <div class="classList skeleton"><div class="col-3"><span class="badge rounded-pill text-dark">R$ <p style="font-size: 15px;">25,00</p></span></div></div>
+                              </div>
+                            </div></a>
+
+                      </div>
+    <!-- historico -->
+    <!-- content -->
+</body>
+</html>

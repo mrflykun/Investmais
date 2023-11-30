@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="../script/script.js" defer></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+  <meta charset="utf-8" />
+    <title>Invest+</title>
+</head>
+<body>
+
+<!-- HEAD -->
+<div class="fixed-top" style="padding: 10px 15px 0px 15px; background-color: #000;">
+    <div class="row">
+   <div class="col-9" style=""><img src="../img/logo-mini.png" style="width:40%; height:80%;"></div>
+   <div class="col-3 text-right"><a href="../account.html"><i class="bi bi-person-circle" style="font-size: 22px; color: #7e26f8;"></i></div>
+    </a></div>
+</div>
+<!-- HEAD -->
+
+<!-- footer menu -->
+<div class="fixed-bottom btngradient" style="padding: 5px 5px 20px 5px;">
+  <div class="row">
+
+
+    <div class="col">
+      <a href="../index.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-house-heart" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+
+
+    <div class="col">
+        <a href="../transition.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-arrow-down-up" style="font-size: 20px;"></i>
+</button></a>
+    </div>
+
+        <div class="col ">
+          <a href="../money.html"><button type="button" class=" btnborder " style="margin: -15px 0px 0px 0px;">
+  <i class="bi bi-coin" style="font-size: 27px;"></i>
+  </button></a>  </div>
+
+    <div class="col">
+     <a href="../notify.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-bell" style="font-size: 20px;"></i>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light">
+    1
+  </span>
+</button></a></div>
+
+    <div class="col">
+   <a href="../menu.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-list" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+    
+    
+    </div>
+  </div>
+</div>
+<!-- footer menu -->
+
+
+<!-- content -->
+<div style="padding-top: 35px">
+
+<!-- Menu  -->
+<div class="MenuNav" style="font-weight:bold;">
+
+<div class="card" style="width: 100%;">
+  Ibovespa <span class="badge bg-danger"><i class="bi bi-arrow-down-short"></i>0,15% </span> <span class="text-danger badge bg-light">-166,36 Hoje</span> 
+  <br><span class="font-weight-light">29 de nov. 12:28:30 UTC-3</span>
+</div>
+
+
+
+</div>
+
+<!-- Menu  -->
+
+<br>
+
+<div class="divgradient-clear overflow-auto" style="padding-bottom: 30px;">
+ 
+  <div class="row">
+    <div class="col-5 text-center" style="font-size: 13px;">
+      
+      <div class="col border border-secondary rounded-pill">215 <span class="badge bg-danger text-light"><i class="bi bi-arrow-down-short"></i>0,15%</span></div>
+      <div class="col border border-secondary rounded-pill">235 <span class="badge bg-danger text-light"><i class="bi bi-arrow-down-short"></i>0,12%</span></div>
+      <div class="col border border-secondary rounded-pill">258 <span class="badge bg-danger text-light"><i class="bi bi-arrow-down-short"></i>0,10%</span></div>
+      <div class="col border border-secondary rounded-pill">300 <span class="badge bg-danger text-light"><i class="bi bi-arrow-down-short"></i>0,5%</span></div>
+      <div class="col border border-secondary rounded-pill">400 <span class="badge bg-success text-light"><i class="bi bi-arrow-up-short"></i>1%</span></div>
+      <div class="col border border-secondary rounded-pill">420 <span class="badge bg-success text-light"><i class="bi bi-arrow-up-short"></i>2%</span></div>
+      <div class="col border border-secondary rounded-pill">500 <span class="badge bg-success text-light"><i class="bi bi-arrow-up-short"></i>20%</span></div>
+      <div class="col border border-secondary rounded-pill">915 <span class="badge bg-success text-light"><i class="bi bi-arrow-up-short"></i>50%</span></div>
+
+
+    </div>
+    <div class="col-7 text-end">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<canvas id="myChart" style="width:100%; max-width:100%; height: 200px; max-height:100%;"></canvas>
+</div>
+
+<script>
+var xValues = [];
+var yValues = [];
+generateData("Math.sin(x)", 1, 5, 1);
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      pointRadius: 0,
+      borderColor: "rgba(0,0,255,0.5)",
+      data: yValues
+    }]
+  },    
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      fontSize: 15
+    }
+  }
+});
+function generateData(value, i1, i2, step = 1) {
+  for (let x = i1; x <= i2; x += step) {
+    yValues.push(eval(value));
+    xValues.push(x);
+  }
+}
+</script>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<div class="row text-center border border-3 rounded-pill" style="font-size: 22px; color: #fff;">
+  <div class="col">
+      <button type="button" class="btn bg-transparent text-success"  data-bs-toggle="modal" data-bs-target="#ModalComprar"><i class="bi bi-caret-up-fill" style="font-size: 25px;" class="btn btn-primary"></i><p>Comprar</button>
+  </div>
+  <div class="col" style="padding-top: 10px;">
+    <h2><span class="badge bg-Light">0<br><span style="font-size: 10px;">Ação</span></span></h2>
+    <span class="badge rounded-pill bg-secondary" style="font-size: 13px; margin-left: -30px; position: absolute; padding: 10px;">R$ 0,0</span>
+  </div>
+  <div class="col">
+      <button type="button" class="btn bg-transparent text-danger" data-bs-toggle="modal" data-bs-target="#ModalVender"><i class="bi bi-caret-down-fill" style="font-size: 25px;" class="btn btn-primary"></i><p>Vender</button>
+  </div>
+</div>
+
+
+  <!-- Modal comprar -->
+  <div class="modal fade" id="ModalComprar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding: 10px;">
+            <div class="modal-header" style="color: #060408;">
+                <h2>Comprar Ação</h2>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+              <span>Saldo: R$ 0.000,00</span>
+              <br><br>
+                <span>Ações:</span>
+                <input type="number" id="depositcred" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1" max="1000" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                <br>
+
+                <span>Valor:</span>
+                <div class="input-group mb-3">
+                    <span class="input-group-text border-0 bg-light" id="basic-addon1">R$</span>
+                    <input type="number" id="depositcred" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1.00" max="1000.00" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                
+                
+                </div>
+                <div class="row">
+                  <div class="col-6 text-center">
+                    <div class="btninvest text-center" style=" color: #fff; padding: 5px;" onclick="deposit100()">
+                      Reiniciar
+                  </div>                </div>
+                  <div class="col-6 text-center">
+                    <div class="btninvest text-center" style=" color: #fff; padding: 5px;" onclick="deposit100()">
+                      Máximo
+                  </div>                  </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-6 text-center">
+                    <button type="button" class="btn border border-dark rounded-pill" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                </div>
+                <div class="col-6 text-center">
+                    <button type="button" class="btn border border-success text-success rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="loadingpop()">Comprar</button>
+                </div>
+            </div>
+
+            <br />
+        </div>
+
+    </div>
+</div>
+<!-- Modal comprar -->
+
+
+
+
+  <!-- Modal comprar -->
+  <div class="modal fade" id="ModalVender" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding: 10px;">
+            <div class="modal-header" style="color: #060408;">
+                <h2>Vender Ação</h2>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+              <span>Saldo: R$ 0.000,00</span>
+              <br><br>
+                <span>Ações:</span>
+                <input type="number" id="depositcred" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1" max="1000" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                <br>
+
+                <span>Valor:</span>
+                <div class="input-group mb-3">
+                    <span class="input-group-text border-0 bg-light" id="basic-addon1">R$</span>
+                    <input type="number" id="depositcred" class="form-control border-0 bg-light" placeholder="" aria-label="valor" min="1.00" max="1000.00" step="0.01" value="0" style="font-size: 22px;font-family: 'Roboto', sans-serif;" onchange="atualizarRange()">
+                
+                
+                </div>
+                <div class="row">
+                  <div class="col-6 text-center">
+                    <div class="btninvest text-center" style=" color: #fff; padding: 5px;" onclick="deposit100()">
+                      Reiniciar
+                  </div>                </div>
+                  <div class="col-6 text-center">
+                    <div class="btninvest text-center" style=" color: #fff; padding: 5px;" onclick="deposit100()">
+                      Máximo
+                  </div>                  </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-6 text-center">
+                    <button type="button" class="btn border border-dark rounded-pill" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                </div>
+                <div class="col-6 text-center">
+                    <button type="button" class="btn border border-danger text-danger rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="loadingpop()">Vender</button>
+                </div>
+            </div>
+
+            <br />
+        </div>
+
+    </div>
+</div>
+<!-- Modal comprar -->
+
+<!-- content -->
+</body>
+</html>

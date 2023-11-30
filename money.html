@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="./script/script.js" defer></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><head>
+    <meta charset="utf-8" />
+    <title>Invest+</title>
+</head>
+<body>
+
+  <!-- SCRIPT LOADING + ANIMATION -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+  </script>
+    <!-- Script para remover a classe "skeleton" das divs com a classe "classList" -->
+    <script>
+      // Aguarde o carregamento completo do documento
+      $(document).ready(function () {
+        // Selecione todas as divs com a classe "classList" e remova a classe "skeleton"
+        $(".classList").removeClass("skeleton");
+      });
+    </script>
+   <!-- SCRIPT LOADING + ANIMATION -->
+
+<!-- HEAD -->
+<div class="fixed-top" style="padding: 10px 15px 0px 15px; background-color: #000;">
+    <div class="row">
+   <div class="col-9" style=""><img src="./img/logo-mini.png" style="width:40%; height:80%;"></div>
+   <div class="col-3 text-right"><a href="account.html"><i class="bi bi-person-circle" style="font-size: 22px; color: #7e26f8;"></i></div>
+    </a></div>
+</div>
+<!-- HEAD -->
+
+<!-- footer menu -->
+<div class="fixed-bottom btngradient" style="padding: 5px 5px 20px 5px;">
+  <div class="row">
+
+
+    <div class="col">
+      <a href="index.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-house-heart" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+
+
+    <div class="col">
+        <a href="transition.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-arrow-down-up" style="font-size: 20px;"></i>
+</button></a>
+    </div>
+
+        <div class="col ">
+          <button type="button" class=" btnborder " style="margin: -15px 0px 0px 0px;">
+  <i class="bi bi-coin" style="font-size: 27px;"></i>
+  </button>  </div>
+
+    <div class="col">
+     <a href="notify.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-bell" style="font-size: 20px;"></i>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light">
+    1
+  </span>
+</button></a></div>
+
+    <div class="col">
+   <a href="menu.html"><button type="button" class="btn position-relative rounded-circle text-light">
+  <i class="bi bi-list" style="font-size: 20px;"></i>
+  </button></a>
+    </div>
+    
+    
+    </div>
+  </div>
+</div>
+<!-- footer menu -->
+
+
+<!-- content -->
+<div style="padding-top: 35px">
+
+<!-- Menu  -->
+<div class="MenuNav" style="font-weight:bold;">
+
+<div class="card" style="width: 100%;">
+  <div class="classList skeleton">Rendimentos <span class="badge" style="background-color: #060408;"><i class="bi bi-align-middle"></i> 0% </span></div>
+  <div class="classList skeleton"><h1>R$ 0 </h1></div>
+  <div class="classList skeleton"><h6>R$ 5.924,34</h6></div>
+  <div class="classList skeleton">Ultimo investimento</div>
+  </div>
+
+
+</div>
+<!-- Menu  -->
+
+<br>
+
+<div class="divgradient-clear overflow-auto" style="padding-bottom: 60px;">
+  <div class="col-9"><h5 style="color: #060408;">Meus Investimentos</h5></div>
+</div>
+<br>
+<div class="divgradient-clear overflow-auto" style="padding-bottom: 60px;">
+  <div class="col-9"><h6 style="color: #060408;">Investimentos Abertos</h6></div>
+
+
+  <a href="../investopen/1.html" style="text-decoration: none;"><div class="border rounded-pill" style="padding: 15px;">
+    
+    <div class="row">
+        <div class="col-3"><span class="badge bg-danger text-light"><div class="classList skeleton"><i class="bi bi-arrow-down-short"></i>0,15%</div></span></div>
+        <div class="col-6"><div class="classList skeleton"><h5>BVSP</h5></div><div class="classList skeleton"><span style="font-size: 12px;">29/11/2023.12:28:30</span></div></div>
+        <div class="col-3"><span class="badge rounded-pill  text-dark"><div class="classList skeleton">R$<p style="font-size: 15px;">215</p></div></span></div>
+    </div>
+
+</div>
+</a>
+
+
+</div>
+
+
+<!-- content -->
+</body>
+</html>
